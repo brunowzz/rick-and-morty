@@ -1,0 +1,19 @@
+@use "../../styles/variables" as variables
+
+.filterButton
+    display: flex
+    align-items: center
+    gap: 0.2rem
+    height: 2rem
+    padding: 0.7rem
+    border-radius: 2rem
+    background: variables.$button-color
+    border: none
+    font-size: 0.875rem
+    font-weight: 400
+    color: variables.$color-primary
+    cursor: pointer
+    transition: 0.4s
+
+    &:hover
+        background: variables.$color-terciary

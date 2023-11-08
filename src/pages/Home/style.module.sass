@@ -1,0 +1,83 @@
+@use "../../styles/variables.sass" as variables
+
+.principalContent
+    display: flex
+    justify-content: space-between
+    padding: 1rem 6rem 0 6rem
+    background: variables.$background-color-primary
+
+.principalContentText
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+
+.title
+    width: 24rem
+    margin-bottom: 1.5rem
+    font-size: 3rem
+    font-weight: 700
+    color: variables.$color-primary
+
+    strong
+        color: variables.$color-terciary
+
+.subtitleInfo
+    font-size: 1rem
+    font-weight: 400
+    color: variables.$color-primary
+
+.paragraph
+    font-size: 1rem
+    font-weight: 400
+    color: variables.$color-terciary
+
+.rickAndMorty
+    width: 27rem
+    height: 27rem
+
+.containerItens
+    background: variables.$background-color-secondary
+    padding: 4rem 6rem
+
+.boxFilterElements
+    display: flex
+    justify-content: space-between
+    margin-bottom: 4rem
+
+    input
+        width: 25.3125rem
+        height: 3rem
+        padding: 1rem
+        border: none
+        outline: none
+        border-radius: 2rem
+        background: variables.$card-background-color
+        font-size: 1rem
+        font-weight: 400
+        color: variables.$color-primary
+
+        &::placeholder
+            font-size: 1rem
+            font-weight: 400
+            color: variables.$color-primary
+
+.filterElements
+    display: flex
+    align-items: center
+    gap: 0.7rem
+
+.filterText
+    font-size: 1rem
+    font-weight: 400
+    color: rgba(228, 244, 244, 0.50)
+
+.containerCards
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    justify-items: space-between
+    align-content: center
+    gap: 1rem
+
+.containerEpisodes
+    display: flex
+    justify-content: space-between
