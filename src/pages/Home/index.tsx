@@ -50,7 +50,7 @@ const Home = () => {
     const { data } = await api.get("/episode");
     const results: [] = data.results;
 
-    setEpisodes(results.slice(0, 5));
+    setEpisodes(results.slice(0, 6));
   };
 
   const handleLocation = async () => {

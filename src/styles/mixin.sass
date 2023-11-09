@@ -1,1 +1,19 @@
+@use "./variables" as variables
 
+@mixin modelBox
+    display: flex
+    flex-direction: column
+    padding: 2rem 6rem
+    background: variables.$background-color-secondary
+
+@mixin modelTitle
+    margin-bottom: 1.5rem
+    font-size: 1.5rem
+    font-weight: 700
+    color: variables.$color-primary
+
+@mixin containerCards($value)
+    display: grid
+    grid-template-columns: repeat($value, 1fr)
+    justify-items: center
+    gap: 1rem

@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Characters from "../pages/Characters";
 import Episodes from "../pages/Episodes";
 import Locations from "../pages/Locations";
+import IndependentCharacter from "../pages/IndependentCharacter";
 
 const RoutesApp = () => {
   return (
@@ -15,6 +16,7 @@ const RoutesApp = () => {
           <Route path="/characters" element={<Characters />} />
           <Route path="/episodes" element={<Episodes />} />
           <Route path="/locations" element={<Locations />} />
+          <Route path="/characters/:id" element={<IndependentCharacter />} />
         </Route>
       </Routes>
     </BrowserRouter>
