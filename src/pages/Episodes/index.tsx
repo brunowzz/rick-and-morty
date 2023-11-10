@@ -37,7 +37,7 @@ const Episodes = () => {
       <section className={styles.container}>
         {episode &&
           episode.map((item: EpisodeInterface) => (
-            <CardsEpisodes key={item.id} episodeName={item.name} />
+            <CardsEpisodes key={item.id} id={item.id} episodeName={item.name} />
           ))}
       </section>
     </main>

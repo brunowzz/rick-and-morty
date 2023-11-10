@@ -47,6 +47,7 @@ const Characters = () => {
           personage.map((item: PersonageInterface) => (
             <CardsPersonages
               key={item.id}
+              id={item.id}
               image={item.image}
               personageName={item.name}
               personageStatus={item.status}

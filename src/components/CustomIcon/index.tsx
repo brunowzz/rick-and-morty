@@ -5,8 +5,16 @@ import {
   MdOutlineInsertEmoticon,
   MdOutlineLocalHospital,
   MdOutlineSearch,
+  MdOutlineAddLocationAlt,
+  MdOutlineEmojiPeople,
+  MdPlaylistPlay,
 } from "react-icons/md";
-import { PiTelevisionBold, PiSkullBold, PiInfo } from "react-icons/pi";
+import {
+  PiTelevisionBold,
+  PiSkullBold,
+  PiInfo,
+  PiCalendarBold,
+} from "react-icons/pi";
 
 interface CustomIconInterface {
   icon: string;
@@ -23,9 +31,13 @@ const CustomIcon: React.FC<CustomIconInterface> = ({ icon, color, size }) => {
     MdOutlineInsertEmoticon,
     MdOutlineLocalHospital,
     MdOutlineSearch,
+    MdOutlineAddLocationAlt,
+    MdOutlineEmojiPeople,
+    MdPlaylistPlay,
     PiTelevisionBold,
     PiSkullBold,
     PiInfo,
+    PiCalendarBold,
   };
 
   const IconComponent: string = iconMapping[icon];

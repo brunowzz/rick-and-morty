@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import RickAndMorty from "../../assets/rick-and-morty.png";
 
 import api from "../../services/api";
-import FilterButton from "../../components/FilterButton";
 import Subtitles from "../../components/Subtitles";
 import CardsPersonages from "../../components/CardsPersonages";
 import CardsEpisodes from "../../components/CardsEpisodes";
@@ -50,7 +49,7 @@ const Home = () => {
     const { data } = await api.get("/episode");
     const results: [] = data.results;
 
-    setEpisodes(results.slice(0, 6));
+    setEpisodes(results.slice(0, 5));
   };
 
   const handleLocation = async () => {
@@ -92,26 +91,6 @@ const Home = () => {
       </article>
 
       <section className={styles.containerItens}>
-        <div className={styles.boxFilterElements}>
-          <input
-            type="text"
-            placeholder="Personagem, episódio, localização..."
-          />
-
-          <span className={styles.filterElements}>
-            <p className={styles.filterText}>Filtrar por:</p>
-
-            <FilterButton
-              iconName="MdOutlineInsertEmoticon"
-              text="Personagens"
-            />
-
-            <FilterButton iconName="BiPlanet" text="Localizações" />
-
-            <FilterButton iconName="PiTelevisionBold" text="Episódios" />
-          </span>
-        </div>
-
         <Subtitles text="Personagens" url="/characters" />
 
         <section className={styles.containerCards}>
@@ -119,6 +98,7 @@ const Home = () => {
             personage.map((item: PersonageInterface) => (
               <CardsPersonages
                 key={item.id}
+                id={item.id}
                 image={item.image}
                 personageName={item.name}
                 personageStatus={item.status}
@@ -133,7 +113,11 @@ const Home = () => {
         <section className={styles.containerEpisodes}>
           {episodes &&
             episodes.map((item: EpisodeInterface) => (
-              <CardsEpisodes key={item.id} episodeName={item.name} />
+              <CardsEpisodes
+                key={item.id}
+                id={item.id}
+                episodeName={item.name}
+              />
             ))}
         </section>
 
@@ -144,8 +128,10 @@ const Home = () => {
             location.map((item: LocationInterface) => (
               <CardsLocation
                 key={item.id}
+                id={item.id}
                 typeLocation={item.type}
                 nameLocation={item.name}
+                iconName="BiPlanet"
               />
             ))}
         </section>

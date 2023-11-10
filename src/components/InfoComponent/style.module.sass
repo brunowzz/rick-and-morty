@@ -1,0 +1,25 @@
+@use "../../styles/variables" as variables
+@use "../../styles/mixin" as mixin
+
+.main
+    height: 70vh
+    @include mixin.modelBox
+    background: variables.$background-color-primary
+    color: variables.$color-primary
+
+.title
+    @include mixin.modelTitle
+    font-size: 3rem
+
+.boxInfos
+    display: flex
+    gap: 1.5rem
+    margin-bottom: 4.5rem
+
+.textInfo
+    display: flex
+    align-items: center
+    gap: 0.5rem
+    font-size: 1.5rem
+    font-weight: 400
+    color: variables.$color-primary

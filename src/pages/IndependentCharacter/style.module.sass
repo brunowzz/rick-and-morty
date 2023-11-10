@@ -1,0 +1,58 @@
+@use "../../styles/variables" as variables
+@use "../../styles/mixin" as mixin
+
+.main
+    @include mixin.modelBox
+    background: variables.$background-color-primary
+    color: variables.$color-primary
+
+.boxInfoPersonage
+    display: flex
+    align-items: center
+    gap: 4rem
+    min-height: 60vh
+
+.personageImage
+    width: 23rem
+    height: 28rem
+    border-radius: 1rem
+
+.containerItens
+    width: 100%
+
+.title
+    margin-bottom: 2rem
+    font-size: 3rem
+    font-weight: 700
+    color: variables.$color-primary
+
+.subtitleInfo
+    display: flex
+    align-items: center
+    gap: 0.5rem
+    font-size: 1.5rem
+    font-weight: 400
+    color: variables.$color-primary
+
+    strong
+        font-weight: 800
+        color: variables.$color-terciary
+
+.boxStatus
+    display: flex
+    gap: 1.5rem
+    margin: 3rem 0
+
+.statusPersonage
+    display: flex
+    align-items: center
+    gap: 0.3rem
+    font-size: 1.5rem
+    font-style: normal
+    font-weight: 400
+    color: variables.$color-primary
+
+.containerCards
+    display: flex
+    justify-content: flex-end
+    gap: 2rem

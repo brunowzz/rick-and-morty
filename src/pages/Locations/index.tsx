@@ -8,7 +8,7 @@ import styles from "./style.module.sass";
 interface CardsLocationInterface {
   id: number;
   name: string;
-  nameLocation: string;
+  type: string;
 }
 
 const Locations = () => {
@@ -23,6 +23,8 @@ const Locations = () => {
 
       data.push(...response.data.results);
     }
+
+    console.log(data);
 
     setlocation(data);
   };
@@ -40,8 +42,10 @@ const Locations = () => {
           location.map((item: CardsLocationInterface) => (
             <CardsLocations
               key={item.id}
-              typeLocation={item.name}
+              id={item.id}
+              typeLocation={item.type}
               nameLocation={item.name}
+              iconName="BiPlanet"
             />
           ))}
       </section>

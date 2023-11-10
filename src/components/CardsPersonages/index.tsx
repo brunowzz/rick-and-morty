@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+
 import CustomIcon from "../CustomIcon";
 import ButtonLeanMore from "../ButtonLearnMore";
 
 import styles from "./style.module.sass";
 
 interface CardProps {
+  id: number;
   image: string;
   personageName: string;
   personageStatus: string;
@@ -12,6 +15,7 @@ interface CardProps {
 }
 
 const Cards: React.FC<CardProps> = ({
+  id,
   image,
   personageName,
   personageStatus,
@@ -42,7 +46,9 @@ const Cards: React.FC<CardProps> = ({
       </p>
 
       <span className={styles.boxButton}>
-        <ButtonLeanMore />
+        <Link to={`/characters/${id}`}>
+          <ButtonLeanMore />
+        </Link>
       </span>
     </div>
   );
